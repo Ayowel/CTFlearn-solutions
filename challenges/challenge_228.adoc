@@ -1,0 +1,17 @@
+== QR Code
+:ch_category: Miscellaneous
+:ch_flag: n0_body_f0rget_qr_code
+
+=== Input
+
+> Do you remember something known as QR Code? Simple. Here for you : <br /> https://mega.nz/#!eGYlFa5Z!8mbiqg3kosk93qJCP-DBxIilHH2rf7iIVY-kpwyrx-0
+
+=== Resolution
+
+1. Read the QR code in a QR code reader t get the content `c3ludCB2ZiA6IGEwX29icWxfczBldHJnX2RlX3BicXI=`
+2. base64 decode the content to get `synt vf : a0_obql_s0etrg_de_pbqr`
+3. Do a ROT13 of the code to get the flag
+
+=== Solution
+
+`{ch_flag}`
