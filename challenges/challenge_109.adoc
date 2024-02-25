@@ -1,0 +1,17 @@
+== Don't Bump Your Head(er)
+:ch_category: Web
+:ch_flag: flag{did_this_m3ss_with_y0ur_h34d}
+
+=== Input
+
+> Try to bypass my security measure on this site! http://165.227.106.113/header.php
+
+=== Resolution
+
+1. Connect to the provided url to get a message that indicates an improper user agent and inspect the page to discover a comment `Sup3rS3cr3tAg3nt`
+2. Use curl and set the user-agent (`-H 'User-Agent: Sup3rS3cr3tAg3nt'`) to get a new error pointing to the referer
+3. Use curl and set the user-agent and the expected referer (`-H 'Referer: awesomesauce.com'`) to get the flag
+
+=== Solution
+
+`{ch_flag}`
