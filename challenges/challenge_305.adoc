@@ -1,0 +1,19 @@
+== Vigenere Cipher
+:ch_category: Web
+:ch_flag: flag{CiphersAreAwesome}
+
+=== Input
+
+> The vignere cipher is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers based on the letters of a keyword.<br />
+> 
+> I'm not sure what this means, but it was left lying around: blorpy
+> 
+> gwox{RgqssihYspOntqpxs}
+
+=== Resolution
+
+1. Use a vigenere cipher decoder, `blorpy` is the key.
+
+=== Solution
+
+`{ch_flag}`
