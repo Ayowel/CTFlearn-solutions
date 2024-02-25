@@ -1,0 +1,16 @@
+== Git Is Good
+:ch_category: Forensics
+:ch_flag: flag{protect_your_git}
+
+=== Input
+
+> The flag used to be there. But then I redacted it. Good Luck. https://mega.nz/#!3CwDFZpJ!Jjr55hfJQJ5-jspnyrnVtqBkMHGJrd6Nn_QqM7iXEuc
+
+=== Resolution
+
+1. Unzip the archive and move to the extracted directory
+2. Look for changes made in the last commit on the file `flag.txt`: `git diff HEAD~ flag.txt`
+
+=== Solution
+
+`{ch_flag}`
