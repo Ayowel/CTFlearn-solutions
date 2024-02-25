@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+help() {
+    cat - <<EOF
+This command takes up to two arguments:
+* The directory that contains the challenge files
+* The output file
+EOF
+}
+
+source_dir="${1:-challenges}"
+target_file="${2:-all.adoc}"
+
+if [ ! -d "$source_dir" ]; then
+    echo "The source path does not appear to be a directory" >&2
+    help >&2
+    exit 1
+fi
+
+echo -n > "$target_file"
+
+if [ "$?" -ne 0 ]; then
+    echo "Failed to write to output file '${target_file}'. Aborting"
+    exit 1
+fi
+
+{
+    echo "= Challenge sheet"
+    echo
+    find "$source_dir" -name '*.adoc' -print0 | sort -z | xargs -r0n1 printf "include::%s[]\n\n"
+} | tee "$target_file"

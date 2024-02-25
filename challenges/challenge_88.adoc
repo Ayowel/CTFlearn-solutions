@@ -1,12 +1,18 @@
-= Basic Injection
+== Basic Injection
 :ch_category: Web
 :ch_flag: CTFlearn{th4t_is_why_you_n33d_to_sanitiz3_inputs}
 
-== Resolution
+=== Input
 
-1. Connect to the https://web.ctflearn.com/web4/[provided link]
+> See if you can leak the whole database using what you know about SQL Injections. https://web.ctflearn.com/web4/[link]
+>
+> Don't know where to begin? Check out CTFlearn's SQL Injection Lab
+
+=== Resolution
+
+1. Access the provided link
 2. Write an SQL injection in the `input` field to select all rows in the database: `' OR 1 = '1`
 
-== Solution
+=== Solution
 
 `{ch_flag}`

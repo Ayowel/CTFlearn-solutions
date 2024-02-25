@@ -1,0 +1,20 @@
+== Where Can My Robot Go?
+:ch_category: Web
+:ch_flag: CTFlearn{r0b0ts_4r3_th3_futur3}
+
+=== Input
+
+> Where do robots find what pages are on a website?
+> 
+> Hint:
+> 
+>     What does disallow tell a robot?
+
+=== Resolution
+
+1. Open the robots.txt file at the server's root: https://ctflearn.com/robots.txt
+2. Access the `Disallow` endpoint /70r3hnanldfspufdsoifnlds.html to see the flag
+
+=== Solution
+
+`{ch_flag}`

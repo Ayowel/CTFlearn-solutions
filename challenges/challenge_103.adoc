@@ -1,0 +1,19 @@
+== Taking LS
+:ch_category: Forensics
+:ch_flag: ABCTF{T3Rm1n4l_is_C00l}
+
+=== Input
+
+> Just take the Ls. Check out this zip file and I be the flag will remain hidden. https://mega.nz/#!mCgBjZgB!_FtmAm8s_mpsHr7KWv8GYUzhbThNn0I8cHMBi4fJQp8
+
+=== Resolution
+
+1. Download the file available through the provided link
+2. Unzip the archive in a directory
+3. Get the PDF file's password from the file `The Flag/.ThePassword/ThePassword.txt`
+4. Open the PDF at `The Flag/The Flag.pdf` with the password
+5. Note the flag in the middle of the page
+
+=== Solution
+
+`{ch_flag}`

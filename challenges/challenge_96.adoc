@@ -1,0 +1,16 @@
+== Forensics 101
+:ch_category: Forensics
+:ch_flag: flag{wow!_data_is_cool}
+
+=== Input
+
+> Think the flag is somewhere in there. Would you help me find it? https://mega.nz/#!OHohCbTa!wbg60PARf4u6E6juuvK9-aDRe_bgEL937VO01EImM7c
+
+=== Resolution
+
+1. Download the file
+2. Use the `strings` command on the file, the flag is in the output (use `| grep -i flag` to isolate it)
+
+=== Solution
+
+`{ch_flag}`

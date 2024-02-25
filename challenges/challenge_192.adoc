@@ -1,0 +1,15 @@
+== Base 2 2 the 6
+:ch_category: Cryptography
+:ch_flag: CTF{FlaggyWaggyRaggy}
+
+=== Input
+
+> There are so many different ways of encoding and decoding information nowadays... One of them will work! Q1RGe0ZsYWdneVdhZ2d5UmFnZ3l9
+
+=== Resolution
+
+1. The input is provided as base64, decode it with `base64 -d`
+
+=== Solution
+
+`{ch_flag}`

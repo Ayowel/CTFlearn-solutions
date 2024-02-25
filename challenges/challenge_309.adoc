@@ -1,0 +1,15 @@
+== Morse Code
+:ch_category: Cryptography
+:ch_flag: FLAGSAMUELMORSEISCOOLBYTHEWAYILIKECHEES
+
+=== Input
+
+> ..-. .-.. .- --. ... .- -- ..- . .-.. -- --- .-. ... . .. ... -.-. --- --- .-.. -... -.-- - .... . .-- .- -.-- .. .-.. .. -.- . -.-. .... . . ...
+
+=== Resolution
+
+1. Use a morse code decoder, flag is transparent
+
+=== Solution
+
+`{ch_flag}`

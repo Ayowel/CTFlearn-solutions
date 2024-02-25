@@ -1,0 +1,16 @@
+== Wikipedia
+:ch_category: Miscellaneous
+:ch_flag: cNi76bV2IVERlh97hP
+
+=== Input
+
+> Not much to go off here, but it’s all you need: Wikipedia and 128.125.52.138.
+
+=== Resolution
+
+1. Access wikipedia and search for the IP `128.125.52.138`
+2. In the results, the provided IP made changes to the flags page. Open the change's diff to see the flag
+
+=== Solution
+
+`{ch_flag}`
