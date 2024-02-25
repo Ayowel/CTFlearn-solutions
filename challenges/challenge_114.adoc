@@ -1,0 +1,16 @@
+== POST Practice
+:ch_category: Web
+:ch_flag: flag{p0st_d4t4_4ll_d4y}
+
+=== Input
+
+> This website requires authentication, via POST. However, it seems as if someone has defaced our site. Maybe there is still some way to authenticate? http://165.227.106.113/post.php
+
+=== Resolution
+
+1. Inspect the page's content to notice a comment that contains the `admin` user's password (`71urlkufpsdnlkadsf`)
+2. Send a request to the page with POST content as it would be formatted in a GET query: `curl -d 'username=admin&password=71urlkufpsdnlkadsf' http://165.227.106.113/post.php`
+
+=== Solution
+
+`{ch_flag}`
