@@ -1,0 +1,16 @@
+== Snowboard
+:ch_category: Forensics
+:ch_flag: CTFlearn{SkiBanff}
+
+=== Input
+
+> Find the flag in the jpeg file. Good Luck!
+
+=== Resolution
+
+1. Use exiftool on the image with the `-a` option to see all attributes
+2. Ignore the `CTFLearn` comment, this is a false flag. Instead, base64-decode the second comment to get the true flag
+
+=== Solution
+
+`{ch_flag}`
