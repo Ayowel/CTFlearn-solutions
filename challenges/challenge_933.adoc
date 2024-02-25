@@ -1,0 +1,15 @@
+== Rubber Duck
+:ch_category: Forensics
+:ch_flag: CTFlearn{ILoveJakarta}
+
+=== Input
+
+> Find the flag! Simple forensics challenge to get started with.
+
+=== Resolution
+
+1. Use `exiftool` on the image, the flag is the `Comment`
+
+=== Solution
+
+`{ch_flag}`
