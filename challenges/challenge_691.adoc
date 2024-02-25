@@ -1,0 +1,20 @@
+== Lazy Game Challenge
+:ch_category: Binary
+:ch_flag: CTFlearn{d9029a08c55b936cbc9a30_i_wish_real_betting_games_were_like_this!}
+
+=== Input
+
+> I found an interesting game made by some guy named "John_123". It is some betting game. I made some small fixes to the game; see if you can still pwn this and steal $1000000 from me!
+>
+> To get flag, pwn the server at: `nc thekidofarcrania.com 10001`
+
+
+=== Resolution
+
+1. Connect to the target server with netcat
+2. When prompted for the desired sum, set it to a high negative value (ex: `-1000000000`)
+3. Lose the game by providing an impossible value 10 times
+
+=== Solution
+
+`{ch_flag}`
