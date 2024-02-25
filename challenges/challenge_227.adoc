@@ -1,0 +1,21 @@
+== BruXOR
+:ch_category: Cryptography
+:ch_flag: flag{y0u_Have_bruteforce_XOR}
+
+=== Input
+
+> There is a technique called bruteforce. Message: q{vpln'bH_varHuebcrqxetrHOXEj No key! Just brute .. brute .. brute ... :D
+
+=== Resolution
+
+1. Write a short script to try different XOR key values and look for the most coherent/relevant one (or use a decoder such as https://www.dcode.fr/xor-cipher)
+
+```py
+s = "q{vpln'bH_varHuebcrqxetrHOXEj"
+for i in range (0,256):
+    print(i, ': ', ''.join([chr(b^i) for b in a.encode('utf-8')]))
+```
+
+=== Solution
+
+`{ch_flag}`
