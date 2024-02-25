@@ -1,0 +1,22 @@
+== Simple Programming
+:ch_category: Programming
+:ch_flag: 6662
+
+=== Input
+
+> Can you help me? I need to know how many lines there are where the number of 0's is a multiple of 3 or the numbers of 1s is a multiple of 2. Please! Here is the file: https://mega.nz/#!7aoVEKhK!BAohJ0tfnP7bISIkbADK3qe1yNEkzjHXLKoJoKmqLys
+
+=== Resolution
+
+```
+with open("data.dat", "r") as f:
+    count = 0
+    for line in f:
+        if line.count('0') % 3 == 0 or line.count('1') % 2 == 0:
+            count += 1
+    print(count)
+```
+
+=== Solution
+
+`{ch_flag}`
