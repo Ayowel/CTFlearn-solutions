@@ -1,0 +1,17 @@
+== 07601
+:ch_category: Forensics
+:ch_flag: ABCTF{Du$t1nS_D0jo}
+
+=== Input
+
+> https://mega.nz/#!CXYXBQAK!6eLJSXvAfGnemqWpNbLQtOHBvtkCzA7-zycVjhHPYQQ I think I lost my flag in there. Hopefully, it won't get attacked...
+
+=== Resolution
+
+1. Extract the image's content with `binwalk --dd '.*' AGT.png`
+2. Unzip one of the non-empty archives extracted by binwalk to reveal the file `Secret Stuff.../Don't Open This.../I Warned You.jpeg`
+3. Search the flag in the file with `strings "I Warned You.jpeg | grep -i ctf`
+
+=== Solution
+
+`{ch_flag}`
