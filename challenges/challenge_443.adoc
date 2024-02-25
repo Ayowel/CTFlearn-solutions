@@ -1,0 +1,15 @@
+== HyperStream Test #2
+:ch_category: Cryptography
+:ch_flag: ILOUEBACONDONTYOU
+
+=== Input
+
+> I love the smell of bacon in the morning! ABAAAABABAABBABBAABBAABAAAAAABAAAAAAAABAABBABABBAAAAABBABBABABBAABAABABABBAABBABBAABB
+
+=== Resolution
+
+1. Apply Bacon's cipher to the input
+
+=== Solution
+
+`{ch_flag}`
