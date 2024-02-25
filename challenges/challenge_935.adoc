@@ -1,0 +1,16 @@
+== PikesPeak
+:ch_category: Forensics
+:ch_flag: CTFlearn{Gandalf}
+
+=== Input
+
+> Pay attention to those strings!
+
+=== Resolution
+
+1. Run exiftool with option `-a` to see all `Comment` attributes
+2. Try all comments one after the other to find the right one
+
+=== Solution
+
+`{ch_flag}`
