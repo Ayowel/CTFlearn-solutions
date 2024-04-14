@@ -1,0 +1,18 @@
+== A CAPture of a Flag
+:ch_category: Forensics
+:ch_flag: flag{AFlagInPCAP}
+
+=== Input
+
+> This isn't what I had in mind, when I asked someone to capture a flag... can you help? You should check out WireShark. https://mega.nz/#!3WhAWKwR!1T9cw2srN2CeOQWeuCm0ZVXgwk-E2v-TrPsZ4HUQ_f4
+
+=== Resolution
+
+1. Download the wireshark capture from the link provided in the input (hereafter `flag.pdump`)
+2. Open the file in Wireshark (or in tshark with `tshark -r 'flag.pdump' --color`)
+3. Notice the insecure (HTTP) requests to a POST HTTP API, and notice that one of the GET requests (n°247) contains a base-64 encoded `msg`
+4. Base64-decode the `msg` value
+
+=== Solution
+
+`{ch_flag}`
