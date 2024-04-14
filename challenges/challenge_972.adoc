@@ -1,0 +1,17 @@
+== Chalkboard
+:ch_category: Forensics
+:ch_flag: CTFlearn{I_Like_Math_2_5}
+
+=== Input
+
+> Solve the equations embedded in the jpeg to find the flag. Solve this problem before solving my Scope challenge which is worth 100 points.
+
+=== Resolution
+
+1. Download the challenge's image (hereafter `math.jpg`)
+2. Read the image's comment: `exiftool -a math.jpg`
+3. Solve the equation system provided in the image's comment
+
+=== Solution
+
+`{ch_flag}`
