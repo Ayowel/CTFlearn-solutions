@@ -1,0 +1,36 @@
+== Substitution Cipher
+:ch_category: Cryptography
+:ch_flag: ifonlymoderncryptowaslikethis.
+
+=== Input
+
+> Someone gave me this, but I haven't the slightest idea as to what it says! https://mega.nz/#!iCBz2IIL!B7292dJSx1PGXoWhd9oFLk2g0NFqGApBaItI_2Gsp9w Figure it out for me, will ya?
+
+=== Resolution
+
+1. Download the file `Substitution.txt` from the link provided in the input
+2. Assuming a mono-alphabetic substitution cipher and an english clear-text, recognize that the `'L` are probably `'S`
+3. With the same hypothesis, recognize that the letters in `RTETDZTK 21, 1989 1990` and `RTETDZTK 6, 1995` are probably a month (the only one with the same second and fourth letter is December)
+4. With the same hypothesis, recognize that the regular occurences of `MIT` are probably the word `THE`
+5. Finally, translate the message with the following code and determine new key values by iterating with those assumptions (note that the keys are lowercase to be able to differentiate between mapped and unmapped values)
+
+```py
+with open("Substitution.txt") as f:
+  content = f.read()
+rmap = dict(
+    D="m", E="c", I="h", K="r", L="s", M="t", R="d", T="e", Z="b",
+)
+"""
+# Full map, only 'N missing (one of j, y, and z)
+rmap = dict(
+    A="a", B="y", C="w", D="m", E="c", F="n", G="o", H="p", I="h",
+    J="q", K="r", L="s", M="t", O="i", Q="k",
+    R="d", S="l", T="e", U="g", V="x", W="u", X="v", Y="f", Z="b",
+)
+#"""
+print(''.join([rmap.get(c, c) for c in content]))
+```
+
+=== Solution
+
+`{ch_flag}`
