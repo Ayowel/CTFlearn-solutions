@@ -31,6 +31,10 @@ rmap = dict(
 print(''.join([rmap.get(c, c) for c in content]))
 ```
 
+*Alternatively:*
+
+1. Use automated websites such as https://quipqiup.com/ to find the key automatically
+
 === Solution
 
 `{ch_flag}`
