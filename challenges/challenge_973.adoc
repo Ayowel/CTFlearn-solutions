@@ -1,0 +1,18 @@
+== Tux!
+:ch_category: Forensics
+:ch_flag: CTFlearn{Linux_Is_Awesome}
+
+=== Input
+
+> The flag is hidden inside the Penguin! Solve this challenge before solving my 100 point Scope challenge which uses similar techniques as this one.
+
+=== Resolution
+
+1. Use `exiftool` on the image to print its `Comment`
+2. Use `base64 -d` to decode the comment and get the password
+3. Use `binwalk -e` to extract the zip contained in the image
+4. Open the zip file with the password found to get the flag (`unzip -P PASSWORD -p 1570.zip`)
+
+=== Solution
+
+`{ch_flag}`
