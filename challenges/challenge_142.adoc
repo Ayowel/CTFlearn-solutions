@@ -1,0 +1,22 @@
+== Up For A Little Challenge?
+:ch_category: Forensics
+:ch_flag: flag{hack_complete}
+
+=== Input
+
+> https://mega.nz/#!LoABFK5K!0sEKbsU3sBUG8zWxpBfD1bQx_JY_MuYEWQvLrFIqWZ0
+>
+> You Know What To Do ...
+
+=== Resolution
+
+1. Download the image provided in the input link
+2. Use `strings` on the file and note the mega.nz downoad link as well as the `Mp real_unlock_key` entry
+3. Download the zip file in the mega.nz link
+4. Extract the file `Did I Forget Again?/.Processing.cerb4` from the zip (noticeable by its size)
+5. Extract the image in the .cerb4 with the noted password (ex: `unzip -P 'PASSWORD' 'Did I Forget Again?/.Processing.cerb4'`)
+6. Open the image in a reader and notice the flag written in red in the bottom right corner
+
+=== Solution
+
+`{ch_flag}`
