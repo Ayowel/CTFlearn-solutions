@@ -1,0 +1,25 @@
+== RSA Noob
+:ch_category: Cryptography
+:ch_flag: abctf{b3tter_up_y0ur_e}
+
+=== Input
+
+> These numbers were scratched out on a prison wall. Can you help me decode them? https://mega.nz/#!al8iDSYB!s5olEDK5zZmYdx1LZU8s4CmYqnynvU_aOUvdQojJPJQ
+
+=== Resolution
+
+* Open the file in the provided link
+* Notice the that the file's values are variables used for an RSA encryption: the exponent `e`, the primes product `n` and the cyphertext `c`
+* Notice that, as the exponent is 1, the "cyphertext" is also the cleartext (as the formula is `c = (m^e) % n` with m the cleartext)
+* Decrypt the flag by mapping the "cyphertext" `c` to its cleartext value
+
+```python
+# Calculation in python, assuming c is previously initialized
+# Note that we are manipulating big numbers here, which may cause issues if you try
+# to re-implement this in a language without being carefull of the sizes of the values it supports
+''.join([chr(c//(256**i)%256) for i in range(30, -1, -1)])
+```
+
+=== Solution
+
+`{ch_flag}`
