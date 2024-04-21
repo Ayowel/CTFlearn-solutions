@@ -1,0 +1,16 @@
+== Pho Is Tasty!
+:ch_category: Forensics
+:ch_flag: CTF{I_Love_Pho!!!}
+
+=== Input
+
+> The flag is hidden in the jpeg file. Good Luck! Have some Pho! Solve this challenge before solving my Scope challenge for 100 points.
+
+=== Resolution
+
+1. Running `exiftool -a -u` on the image shows a warning `[minor] Unknown APP3 'Samsung' segment`, indicating unknown/unsupported segments that might contain the flag
+2. Adding the `-v3` option or opening the file directly in a text editor reveals the flag hidden in the first 150 bytes
+
+=== Solution
+
+`{ch_flag}`
