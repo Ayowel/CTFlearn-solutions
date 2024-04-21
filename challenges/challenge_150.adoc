@@ -1,0 +1,22 @@
+== Calculat3 M3
+:ch_category: Web
+:ch_flag: ctf{watch_0ut_f0r_th3_m0ng00s3}
+
+=== Input
+
+> Here! http://web.ctflearn.com/web7/ I forget how we were doing those calculations, but something tells me it was pretty insecure.
+
+=== Resolution
+
+// This one is a bit weird and "unnatural", probably because it was
+// built to allow a single command for the ctf instead of exposing
+// a fault that could be used to solve said ctf
+// Multi-word values are not supported, neither are many other
+// combinations, which either yield the provided input or nothing at all
+
+1. Try to calculate a value and notice that the calculated value is sent to the backend and part of the output sent back
+2. Try to send custom injection values for `expression`. Trying a simple bash injection (`;ls`) shows a file with the flag as its name
+
+=== Solution
+
+`{ch_flag}`
