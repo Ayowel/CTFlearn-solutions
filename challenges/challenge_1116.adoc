@@ -1,0 +1,19 @@
+== Gobustme ?
+:ch_category: Web
+:ch_flag: CTFlearn{gh0sbu5t3rs_4ever}
+
+=== Input
+
+> Some ghosts made this site ?, it's a little spooky but theres a bunch of stuff hidden around.
+>
+> https://gobustme.ctflearn.com/[gobustme.ctflearn.com]
+
+=== Resolution
+
+The server was/is down and the challenge could not be solved "normally" anymore.
+
+* In google, search indexed pages for the site with `site:https://gobustme.ctflearn.com` and look at the short description of the cached `/hide` page
+
+=== Solution
+
+`{ch_flag}`

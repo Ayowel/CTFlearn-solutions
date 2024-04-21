@@ -84,3 +84,5 @@ include::challenges/challenge_979.adoc[]
 
 include::challenges/challenge_1072.adoc[]
 
+include::challenges/challenge_1116.adoc[]
+
