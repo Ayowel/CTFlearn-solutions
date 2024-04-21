@@ -27,5 +27,5 @@ fi
 {
     echo "= Challenge sheet"
     echo
-    find "$source_dir" -name '*.adoc' -print0 | sort -nz | xargs -r0n1 printf "include::%s[]\n\n"
+    find "$source_dir" -name '*.adoc' -print0 | sort -Vz | xargs -r0n1 printf "include::%s[]\n\n"
 } | tee "$target_file"
