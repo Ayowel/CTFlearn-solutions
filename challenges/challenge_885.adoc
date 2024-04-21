@@ -1,0 +1,40 @@
+== Modern Gaius Julius Caesar
+:ch_category: Cryptography
+:ch_flag: CTFlearn{Cyb3r_Cae54r]
+
+=== Input
+
+> One of the easiest and earliest known ciphers but with XXI century twist! Nobody uses Alphabet nowadays right? Why should you when you have your keyboard?
+>
+> BUH'tdy,|Bim5y~Bdt76yQ
+
+=== Resolution
+
+1. Reading the input, guess that we're supposed to use a Caesar cipher with the keyboard's keys as alphabet (assuming a US qwerty alphabet by default)
+2. Reading the cipher, assume that there is a differentiation between lowercase and uppercase letters
+3. Knowing that the cleartext should end with `}` and should start with `flag{` or `ctflearn{`, try to guess the real offset
+
+```python
+# BUH is a line-based offset of 2 with CTF on the keyboard, which also works if lines are wrapped around
+c = "BUH'tdy,|Bim5y~Bdt76yQ"
+line_offset = -2
+lowercase_lines = [
+    "`1234567890-=",
+    "qwertyuiop[]\\",
+    "asdfghjkl;'",
+    "zxcvbnm,.?",
+]
+uppercase_lines = [
+    "~!@#$%^&*()_+",
+    "QWERTYUIOP{}|",
+    "ASDFGHJKL:\"",
+    "ZXCVBNM<>?",
+]
+all_lines = lowercase_lines + uppercase_lines
+# Search for the character in each line. If it is in the current line, remap at the offset
+print(''.join([[l[(l.find(i)+line_offset)%len(l)] for l in all_lines if i in l][0] for i in c]))
+```
+
+=== Solution
+
+`{ch_flag}`
